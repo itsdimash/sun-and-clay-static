@@ -24,7 +24,7 @@ export const tools: Product[] = [
     tagline: "Forming clay products on a potter's wheel.",
     description: "Made by CLAYO. Forming clay products on a potter's wheel.",
     price: 1112.13,
-    image: "/tools/Picture1.jpg",
+    image: "/tools/Picture1.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Voltage", value: "220V" },
@@ -130,7 +130,7 @@ export const tools: Product[] = [
     tagline: "Extrusion of clay bundles.",
     description: "Made by CLAYO. Extrusion of clay bundles.",
     price: 23.93,
-    image: "/tools/Picture8.jpg",
+    image: "/tools/Picture8.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Plastic" },
@@ -146,7 +146,7 @@ export const tools: Product[] = [
     tagline: "Moistening of clay and products in the process of work.",
     description: "Made by CLAYO. Moistening of clay and products in the process of work.",
     price: 55.85,
-    image: "/tools/Picture9.jpg",
+    image: "/tools/Picture9.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -160,7 +160,7 @@ export const tools: Product[] = [
     tagline: "Set and dosage of water/slip when working with clay.",
     description: "Made by CLAYO. Set and dosage of water/slip when working with clay.",
     price: 64.81,
-    image: "/tools/Picture10.jpg",
+    image: "/tools/Picture10.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -174,7 +174,7 @@ export const tools: Product[] = [
     tagline: "Painting (painting) of pottery products.",
     description: "Made by CLAYO. Painting (painting) of pottery products.",
     price: 23.74,
-    image: "/tools/Picture11.jpg",
+    image: "/tools/Picture11.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -188,7 +188,7 @@ export const tools: Product[] = [
     tagline: "Application of paints on pottery.",
     description: "Made by CLAYO. Application of paints on pottery.",
     price: 2.79,
-    image: "/tools/Picture12.jpg",
+    image: "/tools/Picture12.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Shape", value: "Round" },
@@ -203,7 +203,7 @@ export const tools: Product[] = [
     tagline: "Rolling out clay in a pottery workshop.",
     description: "Made by CLAYO. Rolling out clay in a pottery workshop.",
     price: 7.14,
-    image: "/tools/Picture13.jpg",
+    image: "/tools/Picture13.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -217,7 +217,7 @@ export const tools: Product[] = [
     tagline: "Setting the thickness of the formation when rolling clay.",
     description: "Made by CLAYO. Setting the thickness of the formation when rolling clay.",
     price: 146.6,
-    image: "/tools/Picture14.jpg",
+    image: "/tools/Picture14.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Wood" },
@@ -232,7 +232,7 @@ export const tools: Product[] = [
     tagline: "Cutting the product from the potter's wheel.",
     description: "Made by CLAYO. Cutting the product from the potter's wheel.",
     price: 10.95,
-    image: "/tools/Picture15.jpg",
+    image: "/tools/Picture15.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -246,7 +246,7 @@ export const tools: Product[] = [
     tagline: "Smoothing (polishing) the surface of the product.",
     description: "Made by CLAYO. Smoothing (polishing) the surface of the product.",
     price: 5.17,
-    image: "/tools/Picture16.jpg",
+    image: "/tools/Picture16.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Fluoroplast" },
@@ -261,7 +261,7 @@ export const tools: Product[] = [
     tagline: "Working with clay in pottery.",
     description: "Made by CLAYO. Working with clay in pottery.",
     price: 46.14,
-    image: "/tools/Picture17.jpg",
+    image: "/tools/Picture17.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Wood" },
@@ -277,7 +277,7 @@ export const tools: Product[] = [
     tagline: "Handwork with pottery.",
     description: "Made by CLAYO. Handwork with pottery.",
     price: 26.85,
-    image: "/tools/Picture18.jpg",
+    image: "/tools/Picture18.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -291,7 +291,7 @@ export const tools: Product[] = [
     tagline: "Cutting pottery.",
     description: "Made by CLAYO. Cutting pottery.",
     price: 38.01,
-    image: "/tools/Picture19.jpg",
+    image: "/tools/Picture19.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Blade", value: "long" },
@@ -306,7 +306,7 @@ export const tools: Product[] = [
     tagline: "Cutting pottery.",
     description: "Made by CLAYO. Cutting pottery.",
     price: 13.68,
-    image: "/tools/Picture20.jpg",
+    image: "/tools/Picture20.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Blade", value: "double-edged" },
@@ -321,7 +321,7 @@ export const tools: Product[] = [
     tagline: "Working with clay in a pottery workshop.",
     description: "Made by CLAYO. Working with clay in a pottery workshop.",
     price: 9.77,
-    image: "/tools/Picture21.jpg",
+    image: "/tools/Picture21.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Metal" },
@@ -336,7 +336,7 @@ export const tools: Product[] = [
     tagline: "Working with glaze on pottery.",
     description: "Made by CLAYO. Working with glaze on pottery.",
     price: 49.84,
-    image: "/tools/Picture22.jpg",
+    image: "/tools/Picture22.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -350,7 +350,7 @@ export const tools: Product[] = [
     tagline: "Leveling and cleaning the surface of the product.",
     description: "Made by CLAYO. Leveling and cleaning the surface of the product.",
     price: 18.24,
-    image: "/tools/Picture23.jpg",
+    image: "/tools/Picture23.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Type", value: "1" },
@@ -379,7 +379,7 @@ export const tools: Product[] = [
     tagline: "Decoration of pottery products.",
     description: "Made by CLAYO. Decoration of pottery products.",
     price: 95.26,
-    image: "/tools/Picture24.jpg",
+    image: "/tools/Picture24.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Package contents (3 pcs.)", value: "Rolling pin with pattern type 1 - for decorating pottery; Rolling pin with pattern type 2 - for decorating pottery; Rolling pin with pattern type 3 - for decorating pottery" },
@@ -394,7 +394,7 @@ export const tools: Product[] = [
     tagline: "Forming square clay workpieces.",
     description: "Made by CLAYO. Forming square clay workpieces.",
     price: 230.78,
-    image: "/tools/Picture25.jpg",
+    image: "/tools/Picture25.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },
@@ -408,7 +408,7 @@ export const tools: Product[] = [
     tagline: "Rolling out clay layers.",
     description: "Made by CLAYO. Rolling out clay layers.",
     price: 108.49,
-    image: "/tools/Picture26.jpg",
+    image: "/tools/Picture26.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Material", value: "Cotton cloth" },
@@ -423,7 +423,7 @@ export const tools: Product[] = [
     tagline: "CLAYO equipment for the workshop.",
     description: "A piece of Pottery workshop equipment equipment from CLAYO. See the details below for full specs.",
     price: 349.23,
-    image: "/tools/Picture27.jpg",
+    image: "/tools/Picture27.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Volume", value: "at least 190 ml per bottle" },
@@ -467,7 +467,7 @@ export const tools: Product[] = [
     tagline: "CLAYO equipment for the workshop.",
     description: "A piece of Pottery workshop equipment equipment from CLAYO. See the details below for full specs.",
     price: 125.65,
-    image: "/tools/Picture28.jpg",
+    image: "/tools/Picture28.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Country of manufacture", value: "Germany" },
@@ -484,7 +484,7 @@ export const tools: Product[] = [
     tagline: "CLAYO equipment for the workshop.",
     description: "A piece of Pottery workshop equipment equipment from CLAYO. See the details below for full specs.",
     price: 125.65,
-    image: "/tools/Picture29.jpg",
+    image: "/tools/Picture29.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Country of manufacture", value: "Germany" },
@@ -501,7 +501,7 @@ export const tools: Product[] = [
     tagline: "Modeling.",
     description: "Made by CLAYO. Modeling.",
     price: 53.61,
-    image: "/tools/Picture30.jpg",
+    image: "/tools/Picture30.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Color", value: "Red" },
@@ -517,7 +517,7 @@ export const tools: Product[] = [
     tagline: "CLAYO equipment for the workshop.",
     description: "A piece of Pottery workshop equipment equipment from CLAYO. See the details below for full specs.",
     price: 377.02,
-    image: "/tools/Picture31.jpg",
+    image: "/tools/Picture31.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Complete set (10 pcs.)", value: "Paint for pottery, color \"Limoncello\"; Paint for pottery, color \"Pumpkin\"; Paint for pottery, color \"Strawberry field\"; Paint for pottery, color \"Snow Queen\"; Black Swan pottery paint; Paint for pottery, color \"Magnolia\"; Paint for pottery, color \"Song of the Mermaid\"; Paint for pottery, color\"Jungle\"; Paint for pottery, color \"Blue Sea\"; Paint for pottery, plum color" },
@@ -532,7 +532,7 @@ export const tools: Product[] = [
     tagline: "Working places in a pottery workshop.",
     description: "Made by CLAYO. Working places in a pottery workshop.",
     price: 118.61,
-    image: "/tools/Picture32.jpg",
+    image: "/tools/Picture32.png",
     specs: [
       { label: "Brand", value: "CLAYO" },
       { label: "Department", value: "Pottery workshop equipment" },

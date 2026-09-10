@@ -18,9 +18,10 @@ export default function Gallery() {
       >
         <motion.div style={{ y }} className="absolute -inset-x-0 -top-[10%] -bottom-[10%]">
           <Image
-            src="/tools/Picture1.jpg"
+            src="/tools/Picture1.png"
             alt="The CLAYO pottery wheel, the workshop's best-selling piece of equipment"
             fill
+            priority
             className="object-cover"
             sizes="(min-width: 1024px) 1024px, 100vw"
           />

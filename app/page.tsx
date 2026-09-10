@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import ProductsSection from "@/components/ProductsSection";
-import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,8 +20,7 @@ const content = {
   contactHeadline: "Ask about stock, or a bulk order.",
   contactDescription:
     "Setting up a classroom, a studio, or just restocking your own bench — reach out any time and we'll help you find what you need.",
-  phone: "[number]",
-  email: "[email]",
+  email: "weizhangofficial31@gmail.com",
   address: "2F-03-01, 74 Luntou Road, Haizhu District, Guangzhou, Guangdong, China",
 };
 
@@ -45,12 +43,10 @@ export default function Home() {
           products={tools}
           accent="ash"
         />
-        <Gallery />
         <About />
         <Contact
           headline={content.contactHeadline}
           description={content.contactDescription}
-          phone={content.phone}
           email={content.email}
           address={content.address}
         />

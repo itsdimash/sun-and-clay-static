@@ -1,18 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Contact({
   headline,
   description,
-  phone,
   email,
   address,
 }: {
   headline: string;
   description: string;
-  phone: string;
   email: string;
   address: string;
 }) {
@@ -31,12 +29,6 @@ export default function Contact({
         <p className="mx-auto mt-4 max-w-sm leading-relaxed text-clay-muted">{description}</p>
 
         <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sienna-wash text-sienna">
-              <Phone size={16} />
-            </span>
-            <span className="text-sm text-clay">{phone}</span>
-          </div>
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage-wash text-sage">
               <Mail size={16} />

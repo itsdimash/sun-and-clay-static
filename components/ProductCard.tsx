@@ -25,9 +25,11 @@ const CATEGORY_LABEL: Record<Product["category"], string> = {
 export default function ProductCard({
   product,
   accent,
+  priority = false,
 }: {
   product: Product;
   accent: "sienna" | "sage" | "ash";
+  priority?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const accentText = ACCENT_TEXT[accent];
@@ -45,6 +47,7 @@ export default function ProductCard({
             src={product.image}
             alt={`${product.name}, ${CATEGORY_LABEL[product.category].toLowerCase()}`}
             fill
+            priority={priority}
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
             sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
           />
