@@ -25,9 +25,9 @@ const hand = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Sun & Clay — Pottery Wheels, Kilns & Studio Supplies",
+  title: "Argillaart — Pottery Wheels, Kilns & Studio Supplies",
   description:
-    "Sun & Clay is a small coastal supply shop stocking pottery wheels, kilns, hand tools, glazes, and clay bodies for potters and studios.",
+    "Argillaart is a small coastal supply shop stocking pottery wheels, kilns, hand tools, glazes, and clay bodies for potters and studios.",
 };
 
 export default function RootLayout({

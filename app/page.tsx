@@ -13,7 +13,7 @@ const content = {
   heroKicker: "a small coastal pottery supply shop",
   heroHeadline: "Everything a potter's wheel needs, in one place.",
   heroSubhead:
-    "Sun & Clay stocks wheels, kilns, hand tools, glazes, and clay bodies for potters who'd rather be at the wheel than hunting down a supplier.",
+    "Argillaart stocks wheels, kilns, hand tools, glazes, and clay bodies for potters who'd rather be at the wheel than hunting down a supplier.",
   toolsTitle: "The full catalog.",
   toolsDescription:
     "Wheels, kilns, hand tools, glazes, and clay bodies — everything the workshop runs on, in one shop.",

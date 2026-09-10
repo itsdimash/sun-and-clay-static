@@ -38,7 +38,7 @@ export default function Navbar() {
               strokeLinejoin="round"
             />
           </svg>
-          <span className="font-display text-lg italic text-clay">Sun &amp; Clay</span>
+          <span className="font-display text-lg italic text-clay">Argillaart</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
