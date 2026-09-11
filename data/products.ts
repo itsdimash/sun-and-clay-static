@@ -539,6 +539,35 @@ export const tools: Product[] = [
       { label: "Price (incl. VAT)", value: "$118.61" },
     ],
   },
+  {
+    slug: "clayo-airbrush",
+    name: "CLAYO Airbrush",
+    category: "tool",
+    tagline: "Applying paint by spraying when painting models.",
+    description: "Made by CLAYO. Applying paint by spraying when painting models.",
+    price: 244.31,
+    image: "/tools/Picture33.png",
+    specs: [
+      { label: "Brand", value: "CLAYO" },
+      { label: "Department", value: "Tools" },
+      { label: "Price (incl. VAT)", value: "$244.31" },
+    ],
+  },
+  {
+    slug: "airbrush-acrylic-paint-water-based",
+    name: "Airbrush acrylic paint, water-based",
+    category: "tool",
+    tagline: "Painting models with airbrush.",
+    description: "Made by CLAYO. Painting models with airbrush.",
+    price: 37.3,
+    image: "/tools/Picture34.png",
+    specs: [
+      { label: "Brand", value: "CLAYO" },
+      { label: "Type", value: "Acrylic, water-based" },
+      { label: "Department", value: "Tools" },
+      { label: "Price (incl. VAT)", value: "$37.30" },
+    ],
+  },
 ];
 
 export const allProducts = tools;
