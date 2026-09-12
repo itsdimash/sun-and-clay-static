@@ -25,7 +25,7 @@ const hand = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Argillaart — Pottery Wheels, Kilns & Studio Supplies",
+  title: "Argillaart",
   description:
     "Argillaart is a small coastal supply shop stocking pottery wheels, kilns, hand tools, glazes, and clay bodies for potters and studios.",
 };
