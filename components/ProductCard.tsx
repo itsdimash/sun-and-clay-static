@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import type { Product } from "@/data/products";
+import ImageSkeleton from "./ImageSkeleton";
 
 const ACCENT_TEXT = {
   sienna: "text-sienna",
@@ -32,6 +33,7 @@ export default function ProductCard({
   priority?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const accentText = ACCENT_TEXT[accent];
   const accentBg = ACCENT_BG[accent];
 
@@ -43,14 +45,20 @@ export default function ProductCard({
     >
       <div className="relative aspect-[4/5] overflow-hidden">
         {product.image ? (
-          <Image
-            src={product.image}
-            alt={`${product.name}, ${CATEGORY_LABEL[product.category].toLowerCase()}`}
-            fill
-            priority={priority}
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-            sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
-          />
+          <>
+            {!loaded && <ImageSkeleton />}
+            <Image
+              src={product.image}
+              alt={`${product.name}, ${CATEGORY_LABEL[product.category].toLowerCase()}`}
+              fill
+              priority={priority}
+              onLoad={() => setLoaded(true)}
+              className={`object-cover transition-all duration-700 ease-out group-hover:scale-[1.05] ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+              sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
+            />
+          </>
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-sand text-clay-faint">
             <span className="font-hand text-lg">soon</span>
