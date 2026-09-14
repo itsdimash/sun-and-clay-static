@@ -36,7 +36,7 @@ export default function ProductsSection({
           className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {products.map((p, i) => (
-            <ProductCard key={p.slug} product={p} accent={accent} priority={i < 3} />
+            <ProductCard key={p.slug} product={p} accent={accent} priority={i < 6} />
           ))}
         </motion.div>
       </div>
