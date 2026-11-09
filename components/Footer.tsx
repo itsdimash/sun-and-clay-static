@@ -1,13 +1,13 @@
 const columns = [
   {
     heading: "Shop",
-    links: [{ label: "Full catalog", href: "#tools" }],
+    links: [{ label: "Full catalog", href: "/#tools" }],
   },
   {
     heading: "Company",
     links: [
-      { label: "Our process", href: "#process" },
-      { label: "Contact", href: "#contact" },
+      { label: "Our process", href: "/#process" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
 ];

@@ -1,8 +1,8 @@
-# Sun & Clay
+# Argillaart
 
-A one-page Next.js site for a handmade pottery, ceramic art, and
-workshop-tools catalog. No "buy" buttons — each product is a card with a
-photo (or a "soon" placeholder), description, and expandable details.
+A Next.js catalog for pottery wheels, ceramic kilns, clay, glazes, and
+workshop tools. Homepage cards link to statically generated product pages
+with complete specifications and an email enquiry action. There is no checkout.
 
 **This is a fully static, code-only site.** There's no CMS or admin
 dashboard — every product and piece of text lives directly in the code.
@@ -28,22 +28,28 @@ are used.
   you like under `public/`) and reference it from `data/products.ts` as
   `image: "/tools/your-file.jpg"`. Leave `image` unset entirely and the
   card shows a plain "soon" placeholder instead.
-- **Contact info, headlines, section text** — all in one place at the top
-  of `app/page.tsx`, in the `content` object.
-- **Site name** — "Sun & Clay". Search that string in
-  `components/Navbar.tsx`, `components/Footer.tsx`, and `app/layout.tsx`
-  to rename it.
+- **Headlines, section text, and address** — at the top of `app/page.tsx`,
+  in the `content` object. The shared enquiry email is in `lib/site.ts`.
+- **Site name and search metadata** — `lib/site.ts`, `app/layout.tsx`,
+  `components/Navbar.tsx`, and `components/Footer.tsx`.
 
 ## Project structure
 
 ```
-app/                Root layout, global styles, the one page (app/page.tsx
-                    is also where all site copy and contact info live)
+app/                Root layout, global styles, homepage, product pages,
+                    sitemap.xml, and robots.txt
 components/         Navbar, Hero, Stats, ProductsSection, ProductCard,
                     About, Gallery, Contact, Footer, VesselMark (hero SVG)
 data/products.ts     Every product on the site — pottery, ceramic art, tools
 public/tools/        Real product photos for the Tools category
+lib/site.ts          Production URL, search metadata, and product summaries
 ```
+
+## Search visibility
+
+See [SEO setup](docs/seo-setup.md) for Google Search Console setup and the
+checks to perform after deployment. Product URLs and the sitemap update
+automatically from `data/products.ts` during each production build.
 
 ## Design notes
 

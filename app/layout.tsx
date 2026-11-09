@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Karla, Caveat } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 const display = Newsreader({
   subsets: ["latin"],
@@ -25,9 +26,21 @@ const hand = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Argillaart",
-  description:
-    "Argillaart is a small coastal supply shop stocking pottery wheels, kilns, hand tools, glazes, and clay bodies for potters and studios.",
+  metadataBase: new URL(site.url),
+  title: { default: site.title, template: "%s | Argillaart" },
+  description: site.description,
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    url: site.url,
+  },
+  twitter: {
+    card: "summary",
+    title: site.title,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({

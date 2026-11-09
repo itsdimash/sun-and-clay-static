@@ -6,6 +6,12 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { tools, allProducts } from "@/data/products";
+import type { Metadata } from "next";
+import { jsonLd, site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 // All site copy lives here in code. To change any of it, edit this file
 // directly and redeploy -- there's no CMS or admin dashboard behind this site.
@@ -20,13 +26,35 @@ const content = {
   contactHeadline: "Ask about stock, or a bulk order.",
   contactDescription:
     "Setting up a classroom, a studio, or just restocking your own bench — reach out any time and we'll help you find what you need.",
-  email: "weizhangofficial31@gmail.com",
+  email: site.email,
   address: "2F-03-01, 74 Luntou Road, Haizhu District, Guangzhou, Guangdong, China",
 };
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${site.url}/#organization`,
+              name: site.name,
+              url: site.url,
+              email: site.email,
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${site.url}/#website`,
+              name: site.name,
+              url: site.url,
+              publisher: { "@id": `${site.url}/#organization` },
+            },
+          ],
+        }) }}
+      />
       <Navbar />
       <main>
         <Hero
