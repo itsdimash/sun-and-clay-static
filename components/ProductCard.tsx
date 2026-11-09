@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import type { Product } from "@/data/products";
 import ImageSkeleton from "./ImageSkeleton";
+import { productPath } from "@/lib/site";
 
 const ACCENT_TEXT = {
   sienna: "text-sienna",
@@ -75,9 +77,18 @@ export default function ProductCard({
         <span className={`inline-block w-fit rounded-full ${accentBg} px-3 py-1 text-[11px] ${accentText}`}>
           {CATEGORY_LABEL[product.category]}
         </span>
-        <h3 className="mt-3 font-display text-lg italic text-clay">{product.name}</h3>
+        <h3 className="mt-3 font-display text-lg italic text-clay">
+          <Link href={productPath(product)} className="hover:underline focus-visible:underline">
+            {product.name}
+          </Link>
+        </h3>
         <p className={`mt-1 text-sm ${accentText}`}>{product.tagline}</p>
         <p className="mt-3 text-sm leading-relaxed text-clay-muted">{product.description}</p>
+
+        <Link href={productPath(product)} className="mt-4 self-start text-sm text-clay underline underline-offset-4">
+          Product details
+          <span className="sr-only"> for {product.name}</span>
+        </Link>
 
         <button
           onClick={() => setOpen((o) => !o)}
