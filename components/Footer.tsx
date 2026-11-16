@@ -1,28 +1,25 @@
-const columns = [
-  {
-    heading: "Shop",
-    links: [{ label: "Full catalog", href: "/#tools" }],
-  },
-  {
-    heading: "Company",
-    links: [
-      { label: "Our process", href: "/#process" },
-      { label: "Contact", href: "/#contact" },
-    ],
-  },
-];
+import { anchor, ui, type Lang } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
-export default function Footer() {
+export default function Footer({ lang }: { lang: Lang }) {
+  const t = ui[lang].footer;
+  const columns = [
+    { heading: t.shop, links: [{ label: t.catalog, href: anchor(lang, "tools") }] },
+    {
+      heading: t.company,
+      links: [
+        { label: t.process, href: anchor(lang, "process") },
+        { label: t.contact, href: anchor(lang, "contact") },
+      ],
+    },
+  ];
   return (
     <footer className="bg-sand/40 px-6 pt-14">
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-1 gap-10 border-b border-clay/10 pb-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2 md:col-span-2">
             <span className="font-display text-xl italic text-clay">Argillaart</span>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-clay-muted">
-              Wheels, kilns, hand tools, glazes, and clay bodies from a small
-              coastal supply shop, stocked for potters who'd rather be at the wheel.
-            </p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-clay-muted">{t.blurb}</p>
           </div>
           {columns.map((col) => (
             <div key={col.heading}>
@@ -40,8 +37,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex flex-col items-start justify-between gap-2 py-6 text-xs text-clay-faint sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Argillaart.</p>
-          <p>Design preview, details subject to change.</p>
+          <p>© {new Date().getFullYear()} {site.legalName ?? site.name}.</p>
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import type { Product } from "@/data/products";
 import ImageSkeleton from "./ImageSkeleton";
+import { ui, type Lang } from "@/lib/i18n";
 import { productPath } from "@/lib/site";
 
 const ACCENT_TEXT = {
@@ -21,21 +22,20 @@ const ACCENT_BG = {
   ash: "bg-ash-wash",
 } as const;
 
-const CATEGORY_LABEL: Record<Product["category"], string> = {
-  tool: "Tools & supplies",
-};
-
 export default function ProductCard({
   product,
   accent,
   priority = false,
+  lang,
 }: {
   product: Product;
   accent: "sienna" | "sage" | "ash";
   priority?: boolean;
+  lang: Lang;
 }) {
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const t = ui[lang].card;
   const accentText = ACCENT_TEXT[accent];
   const accentBg = ACCENT_BG[accent];
 
@@ -51,7 +51,7 @@ export default function ProductCard({
             {!loaded && <ImageSkeleton />}
             <Image
               src={product.image}
-              alt={`${product.name}, ${CATEGORY_LABEL[product.category].toLowerCase()}`}
+              alt={t.alt(product.name)}
               fill
               priority={priority}
               onLoad={() => setLoaded(true)}
@@ -63,31 +63,27 @@ export default function ProductCard({
           </>
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-sand text-clay-faint">
-            <span className="font-hand text-lg">soon</span>
+            <span className="font-hand text-lg">{t.soon}</span>
           </div>
-        )}
-        {typeof product.price === "number" && (
-          <span className="absolute right-3 top-3 rounded-full bg-paper/90 px-3 py-1 text-[11px] text-clay shadow-softer">
-            ${product.price.toLocaleString()}
-          </span>
         )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
         <span className={`inline-block w-fit rounded-full ${accentBg} px-3 py-1 text-[11px] ${accentText}`}>
-          {CATEGORY_LABEL[product.category]}
+          {t.category}
         </span>
         <h3 className="mt-3 font-display text-lg italic text-clay">
-          <Link href={productPath(product)} className="hover:underline focus-visible:underline">
+          <Link href={productPath(product, lang)} className="hover:underline focus-visible:underline">
             {product.name}
           </Link>
         </h3>
         <p className={`mt-1 text-sm ${accentText}`}>{product.tagline}</p>
+        {product.sku && <p className="mt-1 text-xs text-clay-muted">{t.article}{lang === "zh" ? "：" : ": "}{product.sku}</p>}
         <p className="mt-3 text-sm leading-relaxed text-clay-muted">{product.description}</p>
 
-        <Link href={productPath(product)} className="mt-4 self-start text-sm text-clay underline underline-offset-4">
-          Product details
-          <span className="sr-only"> for {product.name}</span>
+        <Link href={productPath(product, lang)} className="mt-4 self-start text-sm text-clay underline underline-offset-4">
+          {t.details}
+          <span className="sr-only">{t.forName(product.name)}</span>
         </Link>
 
         <button
@@ -96,7 +92,7 @@ export default function ProductCard({
           className="mt-4 flex items-center gap-1.5 self-start text-xs font-medium text-clay-faint transition-colors hover:text-clay"
         >
           <ChevronDown size={14} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
-          {open ? "Hide details" : "See details"}
+          {open ? t.hide : t.see}
         </button>
 
         <AnimatePresence initial={false}>

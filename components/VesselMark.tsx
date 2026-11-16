@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion, type Transition } from "framer-motion";
 
-export default function VesselMark() {
+export default function VesselMark({ caption }: { caption: string }) {
   const reduce = useReducedMotion();
 
   const draw = (delay: number): Transition => ({
@@ -122,7 +122,7 @@ export default function VesselMark() {
           animate={skip ?? { opacity: 1, y: 380 }}
           transition={fade(2.5, 0.6)}
         >
-          one of a kind, every time
+          {caption}
         </motion.text>
       </svg>
     </div>

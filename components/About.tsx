@@ -1,37 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ui, type Lang } from "@/lib/i18n";
 
-const steps = [
-  {
-    title: "Wheels & kilns",
-    body: "From a beginner-friendly tabletop wheel to a full ceramic kiln, sized and specced for a home studio or a classroom of ten.",
-  },
-  {
-    title: "Shaping & trimming",
-    body: "Rolling pins, ribs, loop tools, and cutting knives for every stage between a lump of clay and a piece ready to fire.",
-  },
-  {
-    title: "Glazes & clay bodies",
-    body: "High-temperature clay, liquid coatings, and glazes in a range of finishes, so a piece goes from raw to finished without a second supplier.",
-  },
-  {
-    title: "Studio extras",
-    body: "Aprons, work stools, mats, and the small fixtures that make a shared studio actually run smoothly.",
-  },
-];
-
-export default function About() {
+export default function About({ lang }: { lang: Lang }) {
+  const t = ui[lang].about;
+  const steps = t.steps;
   return (
     <section id="process" className="px-6 py-16 md:py-20">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-balance font-display text-3xl italic text-clay md:text-4xl">
-            Everything between a lump of clay and a finished piece.
+            {t.heading}
           </h2>
           <p className="mt-4 leading-relaxed text-clay-muted">
-            Whichever stage you're stocking for, it's in one of these four
-            corners of the shop.
+            {t.sub}
           </p>
         </div>
 

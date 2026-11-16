@@ -1,11 +1,12 @@
 import AnimatedCounter from "./AnimatedCounter";
+import { ui, type Lang } from "@/lib/i18n";
 
-export default function Stats({ totalCount }: { totalCount: number }) {
+export default function Stats({ totalCount, lang }: { totalCount: number; lang: Lang }) {
   const stats = [
-    { value: totalCount, suffix: "", label: "Items in the current catalog", tint: "bg-sienna-wash" },
-    { value: 100, suffix: "%", label: "CLAYO-brand tools & materials", tint: "bg-sage-wash" },
-    { value: 4, suffix: "", label: "Categories: wheels, tools, glazes, clay", tint: "bg-sand" },
-    { value: 3, suffix: "", label: "Clay bodies in stock", tint: "bg-sienna-wash" },
+    { value: totalCount, suffix: "", label: ui[lang].stats[0], tint: "bg-sienna-wash" },
+    { value: 100, suffix: "%", label: ui[lang].stats[1], tint: "bg-sage-wash" },
+    { value: 4, suffix: "", label: ui[lang].stats[2], tint: "bg-sand" },
+    { value: 3, suffix: "", label: ui[lang].stats[3], tint: "bg-sienna-wash" },
   ];
 
   return (

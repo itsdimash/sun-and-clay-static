@@ -1,13 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ui, type Lang } from "@/lib/i18n";
 import VesselMark from "./VesselMark";
 
 export default function Hero({
   kicker,
   headline,
   subhead,
+  lang,
 }: {
+  lang: Lang;
   kicker: string;
   headline: string;
   subhead: string;
@@ -59,13 +62,13 @@ export default function Hero({
             href="#tools"
             className="rounded-full bg-sienna px-6 py-3 text-sm font-medium text-paper shadow-softer transition-transform hover:-translate-y-0.5 hover:shadow-soft"
           >
-            Browse the shop
+            {ui[lang].hero.browse}
           </a>
           <a
             href="#contact"
             className="rounded-full border border-clay/15 bg-paper px-6 py-3 text-sm font-medium text-clay transition-colors hover:border-sage hover:text-sage"
           >
-            Get in touch
+            {ui[lang].hero.touch}
           </a>
         </motion.div>
       </div>
@@ -76,7 +79,7 @@ export default function Hero({
         transition={{ duration: 0.7, delay: 0.35 }}
         className="relative mt-6"
       >
-        <VesselMark />
+        <VesselMark caption={ui[lang].hero.caption} />
       </motion.div>
     </section>
   );
