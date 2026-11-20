@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 import type { Product } from "@/data/products";
 import ImageSkeleton from "./ImageSkeleton";
 import { ui, type Lang } from "@/lib/i18n";
-import { productPath } from "@/lib/site";
+import { formatProductPrice, productPath } from "@/lib/site";
 
 const ACCENT_TEXT = {
   sienna: "text-sienna",
@@ -36,6 +36,7 @@ export default function ProductCard({
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const t = ui[lang].card;
+  const price = formatProductPrice(product, lang);
   const accentText = ACCENT_TEXT[accent];
   const accentBg = ACCENT_BG[accent];
 
@@ -80,6 +81,7 @@ export default function ProductCard({
         <p className={`mt-1 text-sm ${accentText}`}>{product.tagline}</p>
         {product.sku && <p className="mt-1 text-xs text-clay-muted">{t.article}{lang === "zh" ? "：" : ": "}{product.sku}</p>}
         <p className="mt-3 text-sm leading-relaxed text-clay-muted">{product.description}</p>
+        {price && <p className="mt-3 font-semibold tabular-nums text-clay">{price}</p>}
 
         <Link href={productPath(product, lang)} className="mt-4 self-start text-sm text-clay underline underline-offset-4">
           {t.details}

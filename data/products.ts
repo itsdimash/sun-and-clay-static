@@ -14,11 +14,14 @@ export interface Product {
   description: string;
   specs: Spec[];
   image?: string;
+  price?: number;
+  priceUnit?: "kg";
 }
 
 export const tools: Product[] = [
   {
     slug: "clayo-pottery-wheel",
+    price: 1100,
     name: "CLAYO Pottery Wheel, 220 V, 350 W",
     sku: "CLY-P9278",
     category: "tool",
@@ -35,6 +38,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-ceramic-kiln",
+    price: 3100,
     name: "CLAYO Ceramic Kiln, 220 V, 1.6 kW",
     sku: "CLY-P7266",
     category: "tool",
@@ -51,6 +55,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-clay-trap",
+    price: 450,
     name: "CLAYO Clay Trap (Settling Tank)",
     sku: "CLY-P2897",
     category: "tool",
@@ -65,6 +70,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-mini-slab-roller",
+    price: 600,
     name: "CLAYO Mini Slab Roller",
     sku: "CLY-P8133",
     category: "tool",
@@ -80,6 +86,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-clay-extruder",
+    price: 950,
     name: "CLAYO Clay Extruder, Wall-Mounted, Manual",
     sku: "CLY-T3881",
     category: "tool",
@@ -95,6 +102,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-banding-wheel-small",
+    price: 80,
     name: "CLAYO Banding Wheel, Small",
     sku: "CLY-R9895",
     category: "tool",
@@ -110,6 +118,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-banding-wheel-large",
+    price: 150,
     name: "CLAYO Banding Wheel, Large",
     sku: "CLY-P4792",
     category: "tool",
@@ -125,6 +134,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-slip-trailer-set",
+    price: 25,
     name: "CLAYO Slip Trailer Set (plastic bottle with nozzles)",
     sku: "CLY-R8060-01",
     category: "tool",
@@ -141,6 +151,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-hand-sprayer",
+    price: 55,
     name: "CLAYO Hand Sprayer",
     sku: "CLY-R8060-02",
     category: "tool",
@@ -155,6 +166,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-pottery-ladle",
+    price: 65,
     name: "CLAYO Pottery Ladle",
     sku: "CLY-R8060-03",
     category: "tool",
@@ -169,6 +181,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-painting-brush",
+    price: 25,
     name: "CLAYO Painting Brush",
     sku: "CLY-R8060-04",
     category: "tool",
@@ -183,6 +196,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-round-sponge",
+    price: 3,
     name: "CLAYO Round Sponge",
     sku: "CLY-R8060-05",
     category: "tool",
@@ -198,6 +212,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-rolling-pin",
+    price: 7,
     name: "CLAYO Rolling Pin",
     sku: "CLY-R8060-06",
     category: "tool",
@@ -212,6 +227,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-wooden-thickness-guides-set",
+    price: 150,
     name: "CLAYO Wooden Thickness Guides (Rolling Strips), Set",
     sku: "CLY-R8060-07",
     category: "tool",
@@ -227,6 +243,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-cutting-wire",
+    price: 10,
     name: "CLAYO Cutting Wire",
     sku: "CLY-R8060-08",
     category: "tool",
@@ -241,6 +258,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-burnishing-tool-ptfe",
+    price: 5,
     name: "CLAYO Burnishing Tool (PTFE)",
     sku: "CLY-R8060-09",
     category: "tool",
@@ -256,6 +274,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-wooden-modeling-tool-set",
+    price: 45,
     name: "CLAYO Wooden Modeling Tool Set",
     sku: "CLY-R8060-10",
     category: "tool",
@@ -272,6 +291,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-basic-pottery-tool-set",
+    price: 30,
     name: "CLAYO Basic Pottery Tool Set",
     sku: "CLY-R8060-11",
     category: "tool",
@@ -286,6 +306,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-cutting-knife-long-blade",
+    price: 40,
     name: "CLAYO Cutting Knife, Long Blade",
     sku: "CLY-R8060-12",
     category: "tool",
@@ -301,6 +322,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-cutting-knife-double-edged",
+    price: 15,
     name: "CLAYO Cutting Knife, Double-Edged",
     sku: "CLY-R8060-13",
     category: "tool",
@@ -316,6 +338,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-needle-tool",
+    price: 10,
     name: "CLAYO Metal Needle Tool (Awl)",
     sku: "CLY-R8060-14",
     category: "tool",
@@ -331,6 +354,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-glazing-tongs",
+    price: 50,
     name: "CLAYO Glazing Tongs",
     sku: "CLY-R8060-15",
     category: "tool",
@@ -345,6 +369,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-steel-scraper-type-1",
+    price: 20,
     name: "CLAYO Steel Scraper, Type 1",
     sku: "CLY-R8060-16",
     category: "tool",
@@ -360,6 +385,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-steel-scraper-type-2",
+    price: 30,
     name: "CLAYO Steel Scraper, Type 2",
     sku: "CLY-R8060-17",
     category: "tool",
@@ -374,6 +400,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-textured-rolling-pin-set",
+    price: 95,
     name: "CLAYO Textured Rolling Pin Set (3 patterns)",
     sku: "CLY-R8060-18",
     category: "tool",
@@ -389,6 +416,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-square-slab-forming-tool",
+    price: 250,
     name: "CLAYO Square Slab Forming Tool",
     sku: "CLY-R8060-20",
     category: "tool",
@@ -403,6 +431,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-cotton-canvas-slab-mat",
+    price: 110,
     name: "CLAYO Cotton Canvas Slab Mat",
     sku: "CLY-R8060-21",
     category: "tool",
@@ -418,6 +447,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-engobe-set-14-colors",
+    price: 350,
     name: "CLAYO Engobe (Liquid Clay Slip) Set, 14 colors, 190 ml",
     sku: "CLY-R1415-01",
     category: "tool",
@@ -434,6 +464,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-clear-glaze",
+    price: 40,
     name: "CLAYO Clear Glaze",
     sku: "CLY-R1415-02",
     category: "tool",
@@ -448,6 +479,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-white-glaze",
+    price: 40,
     name: "CLAYO White Glaze",
     sku: "CLY-R1415-03",
     category: "tool",
@@ -462,6 +494,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-high-fire-clay-cream",
+    price: 150,
     name: "CLAYO High-Fire Clay, Cream, 10 kg",
     sku: "CLY-R1415-04",
     category: "tool",
@@ -479,6 +512,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-high-fire-clay-ivory",
+    price: 150,
     name: "CLAYO High-Fire Clay, Ivory, 10 kg",
     sku: "CLY-R1415-05",
     category: "tool",
@@ -496,6 +530,8 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-red-modeling-clay",
+    price: 55,
+    priceUnit: "kg",
     name: "CLAYO Red Modeling Clay",
     sku: "CLY-R1415-06",
     category: "tool",
@@ -512,6 +548,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-ceramic-paint-set-10-colors",
+    price: 400,
     name: "CLAYO Ceramic Paint Set, 10 colors",
     sku: "CLY-R1415-07",
     category: "tool",
@@ -527,6 +564,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-pottery-studio-chair",
+    price: 150,
     name: "CLAYO Pottery Studio Chair",
     sku: "CLY-C0120",
     category: "tool",
@@ -541,6 +579,7 @@ export const tools: Product[] = [
   },
   {
     slug: "clayo-airbrush",
+    price: 250,
     name: "CLAYO Airbrush",
     sku: "CLY-K9652",
     category: "tool",
@@ -555,6 +594,7 @@ export const tools: Product[] = [
   },
   {
     slug: "airbrush-acrylic-paint-water-based",
+    price: 40,
     name: "Airbrush Acrylic Paint, Water-Based",
     category: "tool",
     tagline: "Water-based acrylic paint for airbrushing models.",

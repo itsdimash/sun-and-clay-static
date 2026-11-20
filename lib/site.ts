@@ -16,6 +16,15 @@ export function productPath(product: Product, lang: Lang = "en"): string {
   return productHref(product.slug, lang);
 }
 
+const priceNumberFormat = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
+
+// Preserve the catalog's historical dollar notation until the currency code is confirmed.
+export function formatProductPrice(product: Product, lang: Lang): string | undefined {
+  if (product.price === undefined) return undefined;
+  const amount = `$${priceNumberFormat.format(product.price)}`;
+  return product.priceUnit === "kg" ? amount + (lang === "zh" ? " / 千克" : " / kg") : amount;
+}
+
 // Spec labels that are shown elsewhere (brand/article) or are not useful in a summary.
 const HIDDEN_LABELS = ["Brand", "Equipment Brand", "Department", "Article (SKU)", "品牌", "类别", "货号（SKU）"];
 
