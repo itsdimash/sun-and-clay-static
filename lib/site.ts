@@ -10,7 +10,6 @@ export const site = {
   keywords: ["CLAYO", "CLAYO pottery wheel", "CLAYO ceramic kiln", "CLAYO clay", "pottery supplies", "ceramic tools", "Argillaart"],
   // Registered company name; shown in the footer and structured data once set.
   legalName: undefined as string | undefined,
-  email: "weizhangofficial31@gmail.com",
 };
 
 export function productPath(product: Product, lang: Lang = "en"): string {
