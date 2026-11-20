@@ -38,6 +38,10 @@ export default function Contact({ headline, description, address, lang }: { head
           {headline}
         </h2>
         <p className="mx-auto mt-4 max-w-sm text-center leading-relaxed text-clay-muted">{description}</p>
+        <p className="mt-5 break-words text-center font-semibold text-clay">info@argillaart.com</p>
+        <p className="mt-1 text-center text-sm leading-relaxed text-clay-muted">
+          {zh ? "此邮箱尚未启用，请使用联系表单留言。" : "Please use the contact form while this mailbox is being set up."}
+        </p>
         <form onSubmit={submitForm} className="mt-8 space-y-5 text-left">
           <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} aria-hidden="true" />
           <div><label htmlFor="argillaart-name" className="text-sm font-medium text-clay">{zh ? "您的姓名" : "Your name"}</label><input id="argillaart-name" name="name" required autoComplete="name" className="mt-2 w-full rounded-2xl border border-ash/20 bg-paper px-4 py-3 text-clay outline-none placeholder:text-clay-muted focus:border-sienna" placeholder={zh ? "姓名" : "Name"} /></div>
