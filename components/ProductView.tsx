@@ -81,10 +81,6 @@ export default function ProductView({ slug, lang }: { slug: string; lang: Lang }
                 <span className="ml-2 text-sm text-clay-muted">{t.priceIncludesVat}</span>
               </p>
             )}
-            <Link href={anchor(lang, "contact")} className="mt-8 inline-flex min-h-11 items-center rounded-full bg-sienna px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-clay focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sienna">
-              {t.ask}
-            </Link>
-            <p className="mt-3 text-sm leading-relaxed text-clay-muted">{t.askNote}</p>
           </div>
         </div>
         <section aria-labelledby="specifications" className="mt-16 md:mt-24">
